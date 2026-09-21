@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-bg: #08080c;
+  --color-surface: #101018;
+  --color-border: rgb(255 255 255 / 0.08);
+  --color-fg: #ededf2;
+  --color-muted: #9a9aab;
+  --color-accent: #ffd86b;
+
+  --font-sans: var(--font-inter);
+  --font-display: var(--font-space-grotesk);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-fg);
+  -webkit-font-smoothing: antialiased;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
