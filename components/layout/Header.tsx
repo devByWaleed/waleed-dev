@@ -1,10 +1,11 @@
 import Link from "next/link";
 import { nav } from "@/data/site";
+import MobileNav from "./MobileNav";
 
 export default function Header() {
     return (
         <header className="fixed inset-x-0 top-0 z-50 border-b border-border bg-bg/70 backdrop-blur-md">
-            <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
+            <div className="relative mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
                 <Link href="#top" className="font-display text-lg font-semibold">
                     <span className="text-accent">&lt;</span>
                     Portfolio
@@ -25,6 +26,8 @@ export default function Header() {
                         ))}
                     </ul>
                 </nav>
+
+                <MobileNav />
             </div>
         </header>
     );

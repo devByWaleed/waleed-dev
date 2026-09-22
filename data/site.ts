@@ -1,8 +1,10 @@
 import type { NavItem, SocialLink } from "@/types";
+import type { Site } from "@/types";
 
-export const site = {
+export const site: Site = {
     name: "Waleed Ahmed",
     role: "Software Engineer",
+    tagline: "",
     hook: "I design, build, and deploy software end to end.",
     description:
         "MERN and Next.js developer who ships complete apps: database design, APIs, and polished interfaces.",
@@ -10,6 +12,7 @@ export const site = {
     phone: "+92 326 9431884",
     location: "Lahore, Pakistan",
     resumeUrl: "/resume.pdf",
+    profileImage: "/profile.webp",
 };
 
 export const nav: NavItem[] = [

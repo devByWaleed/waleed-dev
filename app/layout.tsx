@@ -9,9 +9,9 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "Waleed Ahmed | Full-Stack Developer",
+  title: "Waleed Ahmed | Software Engineer",
   description:
-    "Full-stack developer building MERN and Next.js products. Projects, case studies and contact.",
+    "MERN and Next.js developer building MERN and Next.js products. Projects, case studies and contact.",
 };
 
 export default function RootLayout({

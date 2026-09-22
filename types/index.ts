@@ -54,3 +54,16 @@ export interface SocialLink {
     label: string;
     href: string;
 }
+
+export interface Site {
+    name: string;
+    role: string;
+    tagline: string;
+    profileImage: string;
+    hook: string;
+    description: string;
+    email: string;
+    phone: string;
+    location: string;
+    resumeUrl: string;
+}

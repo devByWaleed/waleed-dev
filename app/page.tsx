@@ -1,4 +1,8 @@
 import Header from "@/components/layout/Header";
+import Hero from "@/components/sections/Hero";
+import About from "@/components/sections/About";
+import Skills from "@/components/sections/Skills";
+import Journey from "@/components/sections/Journey";
 import Section from "@/components/ui/Section";
 
 export default function Home() {
@@ -6,21 +10,11 @@ export default function Home() {
     <>
       <Header />
       <main id="top">
-        <div className="flex min-h-screen items-center justify-center px-6 pt-16">
-          <h1 className="font-display text-5xl font-bold md:text-8xl">
-            Hero goes here
-          </h1>
-        </div>
+        <Hero />
+        <About />
+        <Skills />
+        <Journey />
 
-        <Section id="about" eyebrow="About" title="What I bring">
-          <p className="text-muted">About content</p>
-        </Section>
-        <Section id="skills" eyebrow="Skills" title="Technical skills">
-          <p className="text-muted">Skills content</p>
-        </Section>
-        <Section id="journey" eyebrow="Journey" title="My journey">
-          <p className="text-muted">Journey content</p>
-        </Section>
         <Section id="projects" eyebrow="Work" title="Featured projects">
           <p className="text-muted">Projects content</p>
         </Section>
