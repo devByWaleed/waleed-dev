@@ -7,9 +7,9 @@ import { HiOutlineMail } from "react-icons/hi";
 import { site } from "@/data/site";
 
 const iconLinks = [
-    { label: "GitHub", href: "https://github.com/your-username", icon: FaGithub },
-    { label: "LinkedIn", href: "https://linkedin.com/in/your-username", icon: FaLinkedin },
-    { label: "LeetCode", href: "https://leetcode.com/u/your-username", icon: SiLeetcode },
+    { label: "GitHub", href: "https://github.com/devByWaleed", icon: FaGithub },
+    { label: "LinkedIn", href: "https://linkedin.com/in/waleed-webdev", icon: FaLinkedin },
+    { label: "LeetCode", href: "https://leetcode.com/u/solveWithWaleed", icon: SiLeetcode },
     { label: "Email", href: `mailto:${site.email}`, icon: HiOutlineMail },
 ];
 
@@ -17,14 +17,14 @@ export default function Hero() {
     return (
         <div className="flex min-h-screen flex-col items-center justify-center gap-10 px-6 pt-16 text-center md:flex-row md:text-left">
             <div className="order-1 md:order-2">
-                <div className="relative h-40 w-40 overflow-hidden rounded-full border border-border md:h-56 md:w-56">
+                <div className="relative h-40 w-40 overflow-hidden rounded-full border border-border md:h-56 md:w-56 transition-all duration-300 hover:border-[rgb(124_156_255/0.35)] hover:shadow-[0_0_50px_-12px_rgb(124_156_255/0.5)]">
                     <Image
                         src={site.profileImage}
                         alt={site.name}
                         fill
                         sizes="(min-width: 768px) 224px, 160px"
                         className="object-cover"
-                        priority
+                        fetchPriority="high"
                     />
                 </div>
             </div>
@@ -48,7 +48,7 @@ export default function Hero() {
                     <Link
                         href={site.resumeUrl}
                         target="_blank"
-                        className="flex items-center gap-2 rounded-full bg-accent px-6 py-3 text-sm font-medium text-bg transition-transform hover:scale-105"
+                        className="glow-btn flex items-center gap-2 rounded-full bg-accent px-6 py-3 text-sm font-medium text-bg transition-transform hover:scale-105"
                     >
                         <FiDownload size={16} />
                         Download Resume
@@ -61,9 +61,9 @@ export default function Hero() {
                                 href={href}
                                 target="_blank"
                                 aria-label={label}
-                                className="flex h-11 w-11 items-center justify-center rounded-full border border-border text-muted transition-colors hover:border-accent hover:text-accent"
+                                className="flex h-11 w-11 items-center justify-center rounded-full border border-border text-muted transition-all duration-300 hover:border-accent hover:text-accent hover:shadow-[0_0_20px_-3px_rgb(124_156_255/0.5)] hover:-translate-y-0.5"
                             >
-                                <Icon size={18} />
+                                <Icon size={18} aria-hidden="true" />
                             </Link>
                         ))}
                     </div>

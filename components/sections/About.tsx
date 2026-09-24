@@ -7,7 +7,7 @@ export default function About() {
     return (
         <Section id="about" eyebrow="About" title="What I bring">
             <div className="grid gap-12 md:grid-cols-2">
-                <div>
+                <div className="card p-6 border border-border bg-surface transition-all duration-300 hover:border-[rgb(124_156_255_/_0.35)] hover:shadow-[0_0_50px_-12px_rgb(124_156_255_/_0.4),0_10px_30px_-10px_rgb(0_0_0_/_0.6)] hover:-translate-y-1">
                     <h3 className="font-display text-xl font-semibold text-accent">
                         My approach
                     </h3>
@@ -20,21 +20,21 @@ export default function About() {
                     </p>
                 </div>
 
-                <div>
+                <div className="card p-6 border border-border bg-surface transition-all duration-300 hover:border-[rgb(124_156_255_/_0.35)] hover:shadow-[0_0_50px_-12px_rgb(124_156_255_/_0.4),0_10px_30px_-10px_rgb(0_0_0_/_0.6)] hover:-translate-y-1">
                     <h3 className="font-display text-xl font-semibold text-accent">
                         My journey so far
                     </h3>
                     <p className="mt-4 leading-relaxed text-muted">
                         I am currently in my 7th semester of a Software Engineering
                         degree, about to start my final year project. Alongside my
-                        coursework I build complete MERN applications on my own, and I
-                        have recently started containerizing and deploying them to the
+                        coursework I build complete MERN applications under Dev-Weekends Fellowship, and I
+                        have recently done containerizing and deploying them to the
                         cloud with Docker and AWS.
                     </p>
                 </div>
             </div>
 
-            <div className="card mt-10 flex flex-wrap gap-4 p-6">
+            <div className="card mt-10 flex flex-wrap gap-4 p-6 border border-border bg-surface transition-all duration-300 hover:border-[rgb(124_156_255_/_0.35)] hover:shadow-[0_0_50px_-12px_rgb(124_156_255_/_0.4),0_10px_30px_-10px_rgb(0_0_0_/_0.6)] hover:-translate-y-1">
                 <div>
                     <p className="text-sm text-muted">{site.location}</p>
                     <p className="text-sm text-muted">{site.email}</p>
@@ -42,7 +42,7 @@ export default function About() {
                 <Link
                     href={site.resumeUrl}
                     target="_blank"
-                    className="ml-auto flex items-center gap-2 rounded-full border border-border px-5 py-2.5 text-sm font-medium transition-colors hover:border-accent hover:text-accent"
+                    className="ml-auto flex items-center gap-2 rounded-full border border-border px-5 py-2.5 text-sm font-medium transition-all duration-300 hover:border-accent hover:text-accent hover:shadow-[0_0_20px_-3px_rgb(124_156_255_/_0.4)]"
                 >
                     <FiDownload size={16} />
                     Resume

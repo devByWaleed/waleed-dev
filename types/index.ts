@@ -19,32 +19,6 @@ export interface Project {
     status?: "shipped" | "in-progress";
 }
 
-export interface Diagram {
-    title: string;
-    kind:
-    | "architecture"
-    | "erd"
-    | "sequence"
-    | "use-case"
-    | "dfd"
-    | "uml-class"
-    | "deployment";
-    src: string;
-    caption: string;
-}
-
-export interface CaseStudy {
-    slug: string;
-    problem: string;
-    role: string;
-    stack: string[];
-    decisions: { title: string; why: string }[];
-    challenges: { problem: string; solution: string }[];
-    diagrams: Diagram[];
-    results?: string[];
-    nextSteps?: string[];
-}
-
 export interface NavItem {
     label: string;
     href: string;
@@ -66,4 +40,86 @@ export interface Site {
     phone: string;
     location: string;
     resumeUrl: string;
+}
+
+export interface ContactFormValues {
+    name: string;
+    email: string;
+    subject: string;
+    message: string;
+}
+
+export interface Certificate {
+    slug: string;
+    title: string;
+    issuer: string;
+    year: string;
+    description: string;
+    tags: string[];
+    thumbnail: string;
+    certificateUrl: string;
+}
+
+export interface Badge {
+    name: string;
+    image: string;
+}
+
+export interface CodingStats {
+    leetcodeProfileUrl: string;
+    githubUrl: string;
+    blind75: { completed: number; total: number };
+    capstone: { title: string; description: string; proofUrl?: string };
+}
+
+export type DiagramKind = "architecture" | "flow" | "erd" | "sequence" | "deployment";
+
+export interface CaseStudyDiagram {
+    title: string;
+    kind: DiagramKind;
+    mermaid: string;
+    caption: string;
+}
+
+export interface CaseStudyHighlight {
+    title: string;
+    description: string;
+    image: string;
+}
+
+export interface CaseStudyFeature {
+    title: string;
+    description: string;
+}
+
+export interface CaseStudyStat {
+    label: string;
+    value: string;
+}
+
+export interface CaseStudyChallenge {
+    challenge: string;
+    solution: string;
+}
+
+export interface CaseStudyPracticeGroup {
+    category: string;
+    points: string[];
+}
+
+export interface CaseStudy {
+    slug: string;
+    title: string;
+    tagline: string;
+    description: string;
+    techStack: string[];
+    liveUrl?: string;
+    githubUrl?: string;
+    overview: string;
+    highlights: CaseStudyHighlight[];
+    features: CaseStudyFeature[];
+    stats: CaseStudyStat[];
+    diagrams: CaseStudyDiagram[];
+    challenges: CaseStudyChallenge[];
+    bestPractices: CaseStudyPracticeGroup[];
 }

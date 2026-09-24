@@ -3,10 +3,15 @@ import { skillGroups } from "@/data/skills";
 
 const wordmarkOnly = ["amazonwebservices"];
 
-const iconUrl = (icon: string) => {
+const deviconUrl = (icon: string) => {
     const variant = wordmarkOnly.includes(icon) ? "original-wordmark" : "original";
     return `https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${icon}/${icon}-${variant}.svg`;
 };
+
+const simpleIconUrl = (icon: string) => `https://cdn.simpleicons.org/${icon}`;
+
+const iconUrl = (icon: string, source?: "simple") =>
+    source === "simple" ? simpleIconUrl(icon) : deviconUrl(icon);
 
 export default function Skills() {
     return (
@@ -21,13 +26,13 @@ export default function Skills() {
                             {group.skills.map((skill) => (
                                 <div
                                     key={skill.name}
-                                    className="flex items-center gap-2 rounded-full border border-border bg-surface px-4 py-2 text-sm"
+                                    className="card flex items-center gap-2 rounded-full px-4 py-2 text-sm"
                                 >
                                     {/* eslint-disable-next-line @next/next/no-img-element */}
                                     <img
-                                        src={iconUrl(skill.icon)}
+                                        src={iconUrl(skill.icon, skill.source)}
                                         alt={skill.name}
-                                        className="h-5 w-5 bg-white rounded-sm p-0.5"
+                                        className="h-5 w-5 rounded-sm bg-white p-0.5 object-contain"
                                     />
                                     {skill.name}
                                 </div>

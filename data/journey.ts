@@ -3,40 +3,48 @@ export interface JourneyEntry {
     title: string;
     place: string;
     description: string;
-    status: "done" | "current";
+    status: "Done" | "Current";
 }
 
 export const journey: JourneyEntry[] = [
     {
-        period: "2022 to present",
+        period: "Oct 2023 to present",
         title: "BS Software Engineering",
-        place: "Your University Name",
+        place: "Virtual University of Pakistan",
         description:
-            "Coursework in data structures, databases, software design, and system analysis. Built multiple academic projects including UML, ERD, and sequence diagrams for real systems.",
-        status: "current",
+            "Coursework in data structures, databases and software design. Built multiple academic projects including UML, ERD, and sequence diagrams for real systems.",
+        status: "Current",
     },
     {
-        period: "2024",
+        period: "Mar 2024",
+        title: "Started building Frontend projects",
+        place: "Onsite Course / Self Directed",
+        description:
+            "Moved from coursework into building frontend applications on my own, covering the API and the interfaces.",
+        status: "Done",
+    },
+    {
+        period: "Jun - Sept 2026",
         title: "Started building full stack products",
-        place: "Self directed",
+        place: "Dev-Weekends Fellowship | Online",
         description:
-            "Moved from coursework into building complete MERN applications on my own, covering the database, the API, and the interface.",
-        status: "done",
+            "Moved from coursework into building complete MERN applications, covering the database, the API, and the interface.",
+        status: "Done",
     },
     {
-        period: "2025",
+        period: "Sept 2026",
         title: "Docker and AWS deployment",
-        place: "Self directed",
+        place: "Dev-Weekends Fellowship | Online",
         description:
             "Containerized a MERN application with Docker and deployed it on an AWS EC2 instance, handling environment configuration and server setup.",
-        status: "done",
+        status: "Done",
     },
     {
         period: "Now",
         title: "Final Year Project",
-        place: "Your University Name",
+        place: "Virtual University of Pakistan",
         description:
-            "Starting my capstone project this semester. Details and progress will be added here as the project develops.",
-        status: "current",
+            "About to start Final Year Project.",
+        status: "Current",
     },
 ];

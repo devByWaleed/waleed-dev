@@ -1,9 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
 import { HiMenu, HiX } from "react-icons/hi";
 import { nav } from "@/data/site";
+import ScrollLink from "./ScrollLink";
 
 export default function MobileNav() {
     const [open, setOpen] = useState(false);
@@ -24,13 +24,13 @@ export default function MobileNav() {
                     <ul className="flex flex-col gap-1 px-6 py-4">
                         {nav.map((item) => (
                             <li key={item.href}>
-                                <Link
+                                <ScrollLink
                                     href={item.href}
-                                    onClick={() => setOpen(false)}
+                                    onNavigate={() => setOpen(false)}
                                     className="block py-3 text-base text-muted transition-colors hover:text-fg"
                                 >
                                     {item.label}
-                                </Link>
+                                </ScrollLink>
                             </li>
                         ))}
                     </ul>

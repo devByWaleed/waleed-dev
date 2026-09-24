@@ -4,6 +4,10 @@ import About from "@/components/sections/About";
 import Skills from "@/components/sections/Skills";
 import Journey from "@/components/sections/Journey";
 import Section from "@/components/ui/Section";
+import Projects from "@/components/sections/Projects";
+import Footer from "@/components/layout/Footer";
+import Contact from "@/components/sections/Contact";
+import Achievements from "@/components/sections/Achievements";
 
 export default function Home() {
   return (
@@ -14,17 +18,11 @@ export default function Home() {
         <About />
         <Skills />
         <Journey />
-
-        <Section id="projects" eyebrow="Work" title="Featured projects">
-          <p className="text-muted">Projects content</p>
-        </Section>
-        <Section id="achievements" eyebrow="Progress" title="Achievements">
-          <p className="text-muted">Achievements content</p>
-        </Section>
-        <Section id="contact" eyebrow="Contact" title="Get in touch">
-          <p className="text-muted">Contact content</p>
-        </Section>
+        <Projects />
+        <Achievements />
+        <Contact />
       </main>
+      <Footer />
     </>
   );
 }

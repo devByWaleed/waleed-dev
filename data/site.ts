@@ -11,7 +11,7 @@ export const site: Site = {
     email: "waleeddev91@gmail.com",
     phone: "+92 326 9431884",
     location: "Lahore, Pakistan",
-    resumeUrl: "/resume.pdf",
+    resumeUrl: "/Waleed-Ahmed-CV.pdf",
     profileImage: "/profile.webp",
 };
 
