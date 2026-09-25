@@ -12,8 +12,8 @@ export const site: Site = {
     phone: "+92 326 9431884",
     location: "Lahore, Pakistan",
     resumeUrl: "/Waleed-Ahmed-CV.pdf",
-    profileImage: "/profile.webp",
-    siteUrl: "https://waleed-dev.netlify.app",
+    profileImage: "/images/profile.webp",
+    siteUrl: "https://waleed-code.netlify.app",
 };
 
 export const nav: NavItem[] = [
