@@ -79,7 +79,7 @@ export const projects: Project[] = [
         categories: ["Frontend"],
         tags: ["HTML5", "TailwindCSS", "JavaScript", "Web Design", "EmailJs"],
         thumbnail: "/images/projects/soccer-landing.webp",
-        liveUrl: "",
+        liveUrl: "https://tls-redesign.netlify.app",
         githubUrl: "https://github.com/devByWaleed/tls-redesign",
         hasCaseStudy: false,
         featured: true,

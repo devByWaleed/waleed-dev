@@ -35,6 +35,7 @@ export const skillGroups: SkillGroup[] = [
             { name: "Mongoose", icon: "mongoose" },
             { name: "Redis", icon: "redis" },
             { name: "Supabase", icon: "supabase" },
+            { name: "Prisma", icon: "prisma" },
         ],
     },
     {
@@ -53,8 +54,9 @@ export const skillGroups: SkillGroup[] = [
         skills: [
             { name: "GitHub", icon: "github" },
             { name: "Cloudinary", icon: "cloudinary", source: "simple" },
-            { name: "Brevo", icon: "brevo", source: "simple" },
+            // { name: "Brevo", icon: "brevo", source: "simple" },
             { name: "Vercel", icon: "vercel" },
+            { name: "Netlify", icon: "netlify" },
             { name: "Render", icon: "render", source: "simple" },
             { name: "Postman", icon: "postman" },
             { name: "VS Code", icon: "vscode" },

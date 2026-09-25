@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import type { Metadata } from "next";
 import { FiArrowLeft, FiExternalLink } from "react-icons/fi";
 import { FaGithub } from "react-icons/fa";
 import { caseStudies } from "@/data/case-studies/index";
@@ -12,6 +13,26 @@ import BestPractices from "@/components/case-study/BestPractices";
 
 export function generateStaticParams() {
     return caseStudies.map((study) => ({ slug: study.slug }));
+}
+
+export async function generateMetadata({
+    params,
+}: {
+    params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+    const { slug } = await params;
+    const study = caseStudies.find((item) => item.slug === slug);
+    if (!study) return {};
+
+    return {
+        title: study.title,
+        description: study.description,
+        openGraph: {
+            title: `${study.title} | Case Study`,
+            description: study.description,
+            images: study.highlights[0] ? [study.highlights[0].image] : undefined,
+        },
+    };
 }
 
 export default async function CaseStudyPage({

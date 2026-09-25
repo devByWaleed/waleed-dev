@@ -13,6 +13,7 @@ export const site: Site = {
     location: "Lahore, Pakistan",
     resumeUrl: "/Waleed-Ahmed-CV.pdf",
     profileImage: "/profile.webp",
+    siteUrl: "https://waleed-dev.netlify.app",
 };
 
 export const nav: NavItem[] = [

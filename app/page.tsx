@@ -8,6 +8,7 @@ import Projects from "@/components/sections/Projects";
 import Footer from "@/components/layout/Footer";
 import Contact from "@/components/sections/Contact";
 import Achievements from "@/components/sections/Achievements";
+import TechMarquee from "@/components/sections/TechMarquee";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <Header />
       <main id="top">
         <Hero />
+        <TechMarquee />
         <About />
         <Skills />
         <Journey />

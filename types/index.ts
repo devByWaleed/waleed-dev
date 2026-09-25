@@ -34,6 +34,7 @@ export interface Site {
     role: string;
     tagline: string;
     profileImage: string;
+    siteUrl: string;
     hook: string;
     description: string;
     email: string;

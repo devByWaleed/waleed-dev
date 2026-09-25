@@ -15,6 +15,156 @@
 
 html {
   scroll-behavior: smooth;
+  scrollbar-color: var(--color-accent) var(--color-surface);
+  scrollbar-width: thin;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-fg);
+  -webkit-font-smoothing: antialiased;
+  background-image:
+    radial-gradient(ellipse 70% 45% at 50% -5%, color-mix(in srgb, var(--color-accent) 22%, transparent), transparent 60%),
+    radial-gradient(ellipse 50% 35% at 90% 15%, color-mix(in srgb, var(--color-accent) 10%, transparent), transparent 60%);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+.card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 1rem;
+  box-shadow: 0 8px 24px -8px rgb(0 0 0 / 0.5);
+  transition: box-shadow 300ms ease, border-color 300ms ease, transform 300ms ease;
+}
+
+.card:hover {
+  border-color: color-mix(in srgb, var(--color-glow) 45%, transparent);
+  box-shadow:
+    0 0 45px -10px color-mix(in srgb, var(--color-glow) 45%, transparent),
+    0 10px 30px -10px rgb(0 0 0 / 0.6);
+  transform: translateY(-3px);
+}
+
+.glow-dot {
+  background: radial-gradient(circle at 30% 30%,
+      color-mix(in srgb, var(--color-glow) 70%, white),
+      var(--color-glow) 55%,
+      color-mix(in srgb, var(--color-glow) 70%, black) 100%);
+  box-shadow:
+    0 0 16px 3px color-mix(in srgb, var(--color-glow) 60%, transparent),
+    inset 0 1px 2px rgb(255 255 255 / 0.5);
+}
+
+.glow-btn {
+  box-shadow: 0 0 24px -4px color-mix(in srgb, var(--color-glow) 55%, transparent);
+  transition: box-shadow 300ms ease, transform 300ms ease;
+}
+
+.glow-btn:hover {
+  box-shadow: 0 0 36px -4px color-mix(in srgb, var(--color-glow) 75%, transparent);
+}
+
+.mermaid-diagram svg {
+  max-width: 100%;
+  height: auto;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-track {
+  animation: marquee 30s linear infinite;
+}
+
+.bg-grid-pattern {
+  background-image:
+    linear-gradient(color-mix(in srgb, var(--color-accent) 5%, transparent) 1px, transparent 1px),
+    linear-gradient(90deg, color-mix(in srgb, var(--color-accent) 5%, transparent) 1px, transparent 1px);
+  background-size: 44px 44px;
+  mask-image: radial-gradient(ellipse 90% 70% at 50% 20%, black 30%, transparent 85%);
+  -webkit-mask-image: radial-gradient(ellipse 90% 70% at 50% 20%, black 30%, transparent 85%);
+}
+
+.floating-shape {
+  border: 1px solid color-mix(in srgb, var(--color-accent) 30%, transparent);
+}
+
+@keyframes float-y {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-26px);
+  }
+}
+
+@keyframes float-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .card:hover {
+    transform: none;
+  }
+
+  .marquee-track {
+    animation: none;
+  }
+
+  .floating-shape {
+    animation: none !important;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+/*
+@import "tailwindcss";
+
+@theme inline {
+  --color-bg: #090a0f;
+  --color-surface: #12141c;
+  --color-border: rgb(255 255 255 / 0.08);
+  --color-fg: #f3f4f6;
+  --color-muted: #9ca3af;
+  --color-accent: hsl(158 84% 48%);
+  --color-glow: hsl(158 84% 48%);
+
+  --font-sans: var(--font-inter);
+  --font-display: var(--font-space-grotesk);
+}
+
+html {
+  scroll-behavior: smooth;
   scrollbar-color: #109363 #f1f1f1;
 
   scrollbar-width: thin;
@@ -47,7 +197,6 @@ body {
   transform: translateY(-3px);
 }
 
-/* A glossy, glowing dot or badge, matching the color swatch look */
 .glow-dot {
   background: radial-gradient(circle at 30% 30%,
       hsl(158 90% 72%),
@@ -58,7 +207,6 @@ body {
     inset 0 1px 2px rgb(255 255 255 / 0.5);
 }
 
-/* A glowing button, for primary calls to action */
 .glow-btn {
   box-shadow: 0 0 24px -4px hsl(158 84% 48% / 0.55);
   transition: box-shadow 300ms ease, transform 300ms ease;
@@ -73,6 +221,26 @@ body {
   height: auto;
 }
 
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-track {
+  animation: marquee 30s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -81,50 +249,5 @@ body {
   .card:hover {
     transform: none;
   }
-}
-
-
-
-
-/*
-@import "tailwindcss";
-
-@theme inline {
-  --color-bg: #090a0f;
-  --color-surface: #12141c;
-  --color-border: rgb(255 255 255 / 0.08);
-  --color-fg: #f3f4f6;
-  --color-muted: #9ca3af;
-  --color-accent: #34d399;
-  --color-glow: #10b981;
-
-  --font-sans: var(--font-inter);
-  --font-display: var(--font-space-grotesk);
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  background-color: var(--color-bg);
-  color: var(--color-fg);
-  -webkit-font-smoothing: antialiased;
-}
-
-.card {
-  background-color: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: 1rem;
-  box-shadow: 0 8px 24px -8px rgb(0 0 0 / 0.5);
-  transition: box-shadow 300ms ease, border-color 300ms ease, transform 300ms ease;
-}
-
-.card:hover {
-  border-color: rgb(16 185 129 / 0.45);
-  box-shadow:
-    0 0 45px -10px rgb(16 185 129 / 0.35),
-    0 10px 30px -10px rgb(0 0 0 / 0.6);
-  transform: translateY(-3px);
 }
 */
