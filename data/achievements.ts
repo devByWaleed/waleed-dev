@@ -26,11 +26,11 @@ export const certificates: Certificate[] = [
 
 export const codingStats: CodingStats = {
     leetcodeProfileUrl: "https://leetcode.com/u/solveWithWaleed",
-    githubUrl: "https://github.com/devByWaleed/leetcode/blob/main/Wiki/Blind75/01_arrays.md",
-    blind75: { completed: 52, total: 75 },
+    githubUrl: "https://github.com/devByWaleed/leetcode/blob/main/Wiki/Blind75",
+    blind75: { completed: 75, total: 75 },
     capstone: {
         title: "LeetCode Capstone Task",
         description: "Includes keywords finding, 4 un-seen problems with 3 already-solved problems.",
-        proofUrl: "https://github.com/devByWaleed/leetcode/blob/main/Wiki/CAPSTONE-1/CAPSTONE_JOURNAL.md",
+        proofUrl: "https://github.com/devByWaleed/leetcode/blob/main/Wiki/CAPSTONE-1",
     }
 };

@@ -35,7 +35,7 @@ export const skillGroups: SkillGroup[] = [
             { name: "Mongoose", icon: "mongoose" },
             { name: "Redis", icon: "redis" },
             { name: "Supabase", icon: "supabase" },
-            { name: "Prisma", icon: "prisma" },
+            // { name: "Prisma", icon: "prisma" },
         ],
     },
     {

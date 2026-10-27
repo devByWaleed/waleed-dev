@@ -1,9 +1,15 @@
-import type { MetadataRoute } from "next";
-import { site } from "@/data/site";
+// app/robots.ts
+import { MetadataRoute } from 'next'
 
 export default function robots(): MetadataRoute.Robots {
+    const baseUrl = 'https://waleed-code.netlify.app' // Replace with your actual domain
+
     return {
-        rules: { userAgent: "*", allow: "/" },
-        sitemap: `${site.siteUrl}/sitemap.xml`,
-    };
+        rules: {
+            userAgent: '*',
+            allow: '/',
+            // disallow: ['/private/'], // Uncomment if you have private routes
+        },
+        sitemap: `${baseUrl}/sitemap.xml`,
+    }
 }

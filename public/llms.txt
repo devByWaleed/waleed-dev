@@ -1,0 +1,19 @@
+# Waleed Ahmed - Portfolio
+
+> Software Engineer. Experienced in building modern web applications with Next.js, React, TypeScript, and Node.js.
+
+## Core Pages
+- [About Me](http://waleed-code.netlify.app/#about): Background, experience, skills, and summary.
+- [Projects](http://waleed-code.netlify.app/#projects): Featured software projects, live demos, and source code links.
+- [Achievements](http://waleed-code.netlify.app/#achievements): Technical articles, tutorials, and deep dives.
+- [Contact](http://waleed-code.netlify.app/#contact): Social links, email, and contact form.
+
+## Key Skills & Expertise
+- Frontend: Next.js, React, TypeScript, Tailwind CSS
+- Backend: Node.js, Express, PostgreSQL, Prisma, REST & GraphQL APIs
+- Tools & Cloud: Git, Vercel, Docker, AWS
+
+## Optional Details
+- [Full Resume / CV](http://waleed-code.netlify.app/Waleed-Ahmed-CV.pdf): Downloadable PDF resume.
+- [GitHub Profile](https://github.com/devByWaleed): Open-source contributions and repositories.
+- [LinkedIn Profile](https://linkedin.com/in/waleed-webdev): Professional background and recommendations.
